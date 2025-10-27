@@ -1,0 +1,131 @@
+body{
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: #1561ad;
+  height: 7.5vh;
+  min-height: 75px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-item{
+  background-color:rgba(29, 186, 180, .5);
+  padding: 8px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-bottom: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  font-family: "Bitcount Grid Single", sans-serif;
+}
+
+#hamburger_btn{
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  height: fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  padding: 8px;
+  display: none;
+}
+
+.is_hidden{
+  display: none;
+}
+
+#header_size_controller{
+  height: 7.5vh;
+  width: 100%;
+  min-height: 75px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 426px){
+  .nav-item{
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #hamburger_btn{
+    display: block;
+  }
+
+  header{
+    justify-content: right;
+  }
+
+  header nav{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    left: 0;
+    top: 9.0vh;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .nav-item{
+    box-shadow: 0;
+    border-radius: 0;
+    width: 100%;
+    background-color: rgba(29, 186, 180, 1);
+    display:none;
+  }
+}
+
+/*Responsividade mobile*/
+
+/* @media screen and (max-width: 1023px) {
+  header nav{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .nav-item{
+    font-size: 1rem;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header{
+    min-height: 80px;
+  }
+
+  header nav{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-item{
+    font-size: 1rem;
+    padding: 4px;
+  }
+} */
