@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pkmn_img = document.getElementById("pkmn_img");
 
   pkmn_img.addEventListener("error", () => {
-    pkmn_img.src = "/img/icons/pokeball.ico";
+    pkmn_img.src = "img/icons/pokeball.ico";
   });
 });
 
