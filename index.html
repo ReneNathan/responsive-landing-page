@@ -10,7 +10,7 @@
   <!--Fontes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitcount+Grid+Single:wght@100..900&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitcount+Grid+Single:wght@100..900&family=M+PLUS+Rounded+1c&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!--CSS Externo-->
     <!-- Font Awesome 6.6.0 - ícones sólidos, regulares e de marcas -->
@@ -30,20 +30,209 @@
 <body>
   <header>
     <nav>
-      <a class="nav-item" href="#">teste 1</a>
-      <a class="nav-item" href="#">teste 2</a>
-      <a class="nav-item" href="#">teste 3</a>
+      <a class="nav-item" href="#use_cases_container">Projetos</a>
+      <a class="nav-item" href="#profile_container">Perfil</a>
+      <a class="nav-item" href="#poke_api_container">API</a>
     </nav>
     <button id="hamburger_btn"><i class="fa-solid fa-bars"></i></button>
   </header>
   <div id="header_size_controller">
   </div>
   <main>
-    <div style="width: 100px; height: 10000px; background-color: orange; marging-left:auto; margin-right:auto;">
+    <div id="intro_block">
+      <div id="img_main_container">
+        <img src="img/bg.jpg" alt="">
+        <div id="black_cover"></div>
+        <div id="intro_txt">
+          <span>{ Rene Nathan }</span>
+          <span>- Front-End Developer -</span>
+        </div>
+      </div>
+      <div id="img_txt_container">
+        <img src="img/programming.jpg" alt="">
+        <div id="black_cover"></div>
+        <p id="normal_txt">
+        Sou um profissional multifacetado com sólida experiência em administração pública e desenvolvimento front-end. Atualmente atuo como Agente Administrativo na Prefeitura Municipal de Cajamar, onde aplico metodologias de gestão, otimizo processos administrativos e garanto conformidade com normas e procedimentos. Paralelamente, desenvolvo projetos web centrados em usabilidade, acessibilidade e automação de conteúdo — criando interfaces intuitivas e ferramentas que reduzem tarefas repetitivas e melhoram a experiência do usuário. Minha atuação combina visão estratégica na gestão pública com competências técnicas em front-end, resultando em soluções práticas que conectam tecnologia, eficiência e serviço público de qualidade.
+        </p>
+        <p id="small_txt">
+        Sou um profissional multifacetado com sólida experiência em administração pública e desenvolvimento front-end.
+        </p>
+      </div>
+    </div>
+    <div class="faixa-container">
+      <div class="faixa" id="faixa">
+        <!-- Itens serão adicionados via JS -->
+      </div>
+    </div>
+    <div id="use_cases_container">
+      <div id="use_cases_area">
+        <div id="use_cases_title">⚙️Projetos recentes⚙️</div>
+        <div id="card_container">
+
+          <div class="card">
+            <div class="card_img">
+              <img src="/img/use_case/dash_eventos.png" alt="">
+            </div>
+            <div class="card_txt">
+              <span>Dash controle de eventos</span>
+              <span>Projeto do ambiente frontend de dashs para demonstrar os mais diversos dados de um evento</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="/img/use_case/Dashboard_Emprega.png" alt="">
+            </div>
+            <div class="card_txt">
+              <span>Dash display para eventos</span>
+              <span>Dashs de demonstração de dados para serem apresentados em eventos de modo a disponibilizar dados ou indicadores especificons</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="/img/use_case/mensageria.png" alt="">
+            </div>
+            <div class="card_txt">
+              <span>Design de interface de mensageria</span>
+              <span>Criação e implementação de interfaces de mensageria para atendimentos diversos</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="/img/use_case/transporte_universitario_cajamar.png" alt="">
+            </div>
+            <div class="card_txt">
+              <span>Formulários de cadastro diversos</span>
+              <span>Criação dos mais diversos formulários de cadastro para serem usados em ambientes web desktop ou mobile.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="profile_container">
+      <h2>Perfil</h2>
+      <div id="main_profile_card_container">
+        <div id="main_profile_card">
+          <div class="profile_image_wrapper">
+            <img src="/img/pics/rene_photo.jpeg" alt="Rene Nathan Alves Nascimento">
+          </div>
+          <div id="main_profile_card_txt">
+            <h2>Rene Nathan Alves Nascimento</h2>
+            <p>
+              Desenvolvedor Front-End, formado em Análise e Desenvolvimento de Sistemas;
+              pós-graduado em Engenharia de Redes; MBA em Contabilidade Pública Municipal;
+              e atualmente agente administrativo e desenvolvedor web na Secretaria Municipal
+              de Modernização, Tecnologia e Inovação da Prefeitura Municipal de Cajamar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="profile_card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="/img/icons/github.ico">
+                    <h3>Github</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Github pessoal com projetos pessoais e estudos.</p>
+                        <a href="https://github.com/ReneNathan" target="_blank">Clique aqui</a>
+                </div>
+            </div>
+        </div>
+        <div class="profile_card">
+          <div class="face face1">
+              <div class="content">
+                  <img src="/img/icons/linkedin.ico">
+                  <h3>LinkedIn</h3>
+              </div>
+          </div>
+          <div class="face face2">
+              <div class="content">
+                  <p>Rede social profissional focada no mercado de trabalho.</p>
+                      <a href="https://www.linkedin.com/in/rene-nathan-62a153107/" target="_blank">Clique aqui</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div id="poke_api_container">
+      <h2 id="poke_api_title">Exemplo de consumo de API</h2>
+      <h4><i class="pokeball" role="img" aria-label="Pokébola"></i>PokéAPI</h4>
+      <div id="poke_api_block">
+        <button id="get_random_pokemon">Pokémon do dia</button>
+        <div id="pokemon_form">
+          <div class="form_input">
+            <label for="">Número</label>
+            <input type="text" name="" id="pokemon_number_input" placeholder="-" disabled/>
+          </div>
+
+          <div class="form_input">
+            <label for="">Nome</label>
+            <input type="text" name="" id="pokemon_name_input" placeholder="-" disabled/>
+          </div>
+
+          <div class="form_input">
+            <label for="">Tipo 1</label>
+            <input type="text" name="" id="pokemon_type_1_input" placeholder="-" disabled/>
+          </div>
+
+          <div class="form_input">
+            <label for="">Tipo 2</label>
+            <input type="text" name="" id="pokemon_type_2_input" placeholder="-" disabled/>
+          </div>
+
+          <div id="pkmn_img_container">
+            <img src="#" alt="Pokemon Sprite" id="pkmn_img" onerror="this.onerror=null; this.src='/img/icons/pokeball.ico';">
+          </div>
+        </div>
+        <div id="poke_nota_container">
+          <span id="poke_nota"><b>Nota:</b> API criada por Paul Hallett e contribuidores. Disponível <a href="https://pokeapi.co/" target="_blank">aqui</a>!</span>
+        </div>
+      </div>
     </div>
   </main>
-  <footer>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Rene Nathan</h3>
+        <p>Front-End Developer • Flask & JavaScript Enthusiast</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/seuusuario" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/seuusuario" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:seuemail@gmail.com" aria-label="E-mail">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://renenathan.dev" target="_blank" aria-label="Portfólio">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Rene Nathan. Todos os direitos reservados.</p>
+    </div>
   </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0f1f2f4.js" crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>
@@ -51,3 +240,4 @@
   <!-- JS Scripts -->
   <script src="https://kit.fontawesome.com/86a12c2f97.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/faixa.js"></script>
