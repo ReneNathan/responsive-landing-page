@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     pokemon_type_2_input.value = pokemon_data.types[1] ? pokemon_data.types[1].type.name : "";
 
     pkmn_img.src = pokemon_data.sprites.front_default;
+
+    set_pkmn_base_stats_chart(pokemon_data);
   });
 });
 

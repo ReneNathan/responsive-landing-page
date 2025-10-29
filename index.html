@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <title>Landing Page - Example - Rene Nathan</title>
-  <link rel="icon" type="image/x-icon" href="..img/ico/favicon.png">
+  <title>Rene Nathan - Landing Page</title>
+  <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
 
   <!--Fontes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,7 +164,7 @@
     <hr>
     <div id="poke_api_container">
       <h2 id="poke_api_title">Exemplo de consumo de API</h2>
-      <h4><i class="pokeball" role="img" aria-label="Pokébola"></i>PokéAPI</h4>
+      <h4><i class="pokeball" role="img" aria-label="Pokébola"></i>PokéAPI com <a href="https://www.chartjs.org/docs/latest/" target="_blank">Chart.js</a></h4>
       <div id="poke_api_block">
         <button id="get_random_pokemon">Pokémon do dia</button>
         <div id="pokemon_form">
@@ -190,6 +190,10 @@
 
           <div id="pkmn_img_container">
             <img src="#" alt="Pokemon Sprite" id="pkmn_img" onerror="this.onerror=null; this.src='img/icons/pokeball.ico';">
+          </div>
+
+          <div id="pkmn_chart_container">
+            <canvas id="poke_base_chart"></canvas>
           </div>
         </div>
         <div id="poke_nota_container">
@@ -226,8 +230,7 @@
     </div>
   </footer>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a2e0f1f2f4.js" crossorigin="anonymous"></script>
+
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -237,7 +240,15 @@
 
 </html>
 
-  <!-- JS Scripts -->
+  <!-- === JS Scripts === -->
+  <!--Chart.js-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0f1f2f4.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/86a12c2f97.js" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="js/poke_chart.js"></script>
   <script src="js/main.js"></script>
   <script src="js/faixa.js"></script>
