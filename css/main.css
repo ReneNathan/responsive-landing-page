@@ -28,7 +28,7 @@ hr{
 }
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   width: 100vw;
   position: relative;
   min-width: 300px;
@@ -103,12 +103,29 @@ header nav{
   background-color: transparent;
 }
 
+main {
+  position: relative;
+  z-index: 1; /* garante que tudo dentro do main fique acima */
+}
+
+.background_particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* fica abaixo do conteúdo principal */
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 #intro_block{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   height: fit-content;
   width: 100%;
+  z-index: 1;
 }
 
 #img_main_container{
@@ -155,7 +172,7 @@ header nav{
   margin-bottom: 8px;
 }
 
-#intro_txt span:nth-child(2){
+#intro_txt div span:nth-child(1){
   font-size: 1.6rem;
   font-weight: 600;
   font-family: sans-serif;
@@ -283,6 +300,14 @@ header nav{
   margin-top: 1rem;
 }
 
+#intro_txt div{
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
 /*Responsividade*/
 @media screen and (min-width: 625px){
   .nav-item{
@@ -343,7 +368,7 @@ header nav{
     font-size: 2.5rem;
   }
 
-  #intro_txt span:nth-child(2){
+  #intro_txt div span:nth-child(1){
     font-size: 1rem;
   }
 
@@ -513,7 +538,7 @@ header nav{
 }
 
 .container .profile_card .face.face1 .content{
-    opacity: 0.2;
+    opacity: 0.6;
     transition: 0.5s;
     display: flex;
     flex-direction: column;

@@ -13,6 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitcount+Grid+Single:wght@100..900&family=M+PLUS+Rounded+1c&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!--CSS Externo-->
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Font Awesome 6.6.0 - ícones sólidos, regulares e de marcas -->
   <link
     rel="stylesheet"
@@ -28,6 +31,8 @@
 </head>
 
 <body>
+  <div id="particles-js" class="background_particles">
+  </div>
   <header>
     <nav>
       <a class="nav-item" href="#use_cases_container">Projetos</a>
@@ -45,13 +50,15 @@
         <div id="black_cover"></div>
         <div id="intro_txt">
           <span>{ Rene Nathan }</span>
-          <span>- Front-End Developer -</span>
+          <div>
+            <span id="typed" style="min-height: 38.5px"></span>
+          </div>
         </div>
       </div>
       <div id="img_txt_container">
         <img src="img/programming.jpg" alt="">
         <div id="black_cover"></div>
-        <p id="normal_txt">
+        <p id="normal_txt" data-aos="flip-left">
         Sou um profissional multifacetado com sólida experiência em administração pública e desenvolvimento front-end. Atualmente atuo como Agente Administrativo na Prefeitura Municipal de Cajamar, onde aplico metodologias de gestão, otimizo processos administrativos e garanto conformidade com normas e procedimentos. Paralelamente, desenvolvo projetos web centrados em usabilidade, acessibilidade e automação de conteúdo — criando interfaces intuitivas e ferramentas que reduzem tarefas repetitivas e melhoram a experiência do usuário. Minha atuação combina visão estratégica na gestão pública com competências técnicas em front-end, resultando em soluções práticas que conectam tecnologia, eficiência e serviço público de qualidade.
         </p>
         <p id="small_txt">
@@ -69,7 +76,7 @@
         <div id="use_cases_title">⚙️Projetos recentes⚙️</div>
         <div id="card_container">
 
-          <div class="card">
+          <div class="card" data-aos="flip-left">
             <div class="card_img">
               <img src="img/use_case/dash_eventos.png" alt="">
             </div>
@@ -79,7 +86,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-aos="flip-left">
             <div class="card_img">
               <img src="img/use_case/Dashboard_Emprega.png" alt="">
             </div>
@@ -89,7 +96,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-aos="flip-left">
             <div class="card_img">
               <img src="img/use_case/mensageria.png" alt="">
             </div>
@@ -99,7 +106,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-aos="flip-left">
             <div class="card_img">
               <img src="img/use_case/transporte_universitario_cajamar.png" alt="">
             </div>
@@ -114,7 +121,7 @@
     </div>
     <div id="profile_container">
       <h2>Perfil</h2>
-      <div id="main_profile_card_container">
+      <div id="main_profile_card_container" data-aos="flip-left">
         <div id="main_profile_card">
           <div class="profile_image_wrapper">
             <img src="img/pics/rene_photo.jpeg" alt="Rene Nathan Alves Nascimento">
@@ -131,7 +138,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="profile_card">
+        <div class="profile_card" data-aos="flip-left">
             <div class="face face1">
                 <div class="content">
                     <img src="img/icons/github.ico">
@@ -145,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="profile_card">
+        <div class="profile_card" data-aos="flip-left">
           <div class="face face1">
               <div class="content">
                   <img src="img/icons/linkedin.ico">
@@ -162,7 +169,7 @@
       </div>
     </div>
     <hr>
-    <div id="poke_api_container">
+    <div id="poke_api_container" data-aos="flip-left">
       <h2 id="poke_api_title">Exemplo de consumo de API</h2>
       <h4><i class="pokeball" role="img" aria-label="Pokébola"></i>PokéAPI com <a href="https://www.chartjs.org/docs/latest/" target="_blank">Chart.js</a></h4>
       <div id="poke_api_block">
@@ -241,6 +248,9 @@
 </html>
 
   <!-- === JS Scripts === -->
+  <!--AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <!--Chart.js-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -252,3 +262,32 @@
   <script src="js/poke_chart.js"></script>
   <script src="js/main.js"></script>
   <script src="js/faixa.js"></script>
+
+  <!--Particles.js-->
+  <script src=" https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script>
+
+  <!--Typed.js-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!--INITIALIZE AOS-->
+  <script>
+    AOS.init();
+  </script>
+
+  <!--INITIALIZE PARTICLES-->
+  <script>
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles-js config loaded');
+  });
+  </script>
+
+  <!--INITIALIZE TYPED-->
+<script>
+  var typed = new Typed('#typed', {
+    strings:["- Front-End Developer -"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true,
+    backDelay: 5000
+  });
+</script>
